@@ -5,8 +5,8 @@ import SectionTitle from "./SectionTitle";
 
 const Projects = () => {
     return (
-        <div className="project-wrapper">
-            <SectionTitle title={'Projects'}/>
+        <div className="project-wrapper" id="project">
+            <SectionTitle title={'Projects:'}/>
             <div className="projects">
                 <Project
                     symbol={"fa-solid fa-martini-glass"}

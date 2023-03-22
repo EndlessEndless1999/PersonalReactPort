@@ -1,3 +1,5 @@
+import LinkButton from "./LinkButton";
+
 
 const Project = ({title, description, git, site, tech, symbol}) => {
     return (
@@ -5,8 +7,8 @@ const Project = ({title, description, git, site, tech, symbol}) => {
             <i className={symbol}></i>
             <h3 className="project-title">{title}</h3>
             <p className="project-description">{description}</p>
-            <button className="project-site-button">See Live Site</button>
-            <button className="project-git-button">See Source Code</button>
+            <LinkButton className="project-site-button" link={site} text="See Live Site"/>
+            <LinkButton className="project-git-button" link={git} text="See Source Code"/>
             <p className="project-tech">{tech}</p>
         </div>
     )
