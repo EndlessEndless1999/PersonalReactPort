@@ -3,7 +3,7 @@
 
 const NavItem = ({text}) => {
     return (
-        <li className="navitem" text={text}>{text}</li>
+        <li className="nav-item" text={text}>{text}</li>
     )
 }
 

@@ -1,7 +1,4 @@
 
-
-
-
 :root {
   --primary: #fadda2;
   --secondary: #6b61ff;
@@ -11,15 +8,31 @@
 }
 
 html {
+  margin: 0%;
+  padding: 0%;
   background-color: var(--tertiary);
   font-family: 'Roboto Mono', monospace;
 }
 
+body {
+  margin: 0%;
+  padding: 0%;
+}
+
 .navbar {
+  background-color: var(--primary);
   position: fixed;
+  width: 100%;
   display: flex;
   flex-direction: row;
+  justify-content : center;
   height: 5rem;
+  z-index: 2;
+}
+
+.nav-item {
+  margin-right: 3%;
+  list-style:square;
 }
 
 
@@ -31,8 +44,8 @@ html {
   grid-template-rows: 32% 32% 32% 4%;
   grid-template-areas: 
   'left hero right'
-  'left projects right'
   'left about right'
+  'left projects right'
   'left footer right'
   ;
 }
@@ -48,9 +61,18 @@ html {
   color: white;
 }
 
-.about {
+.about-wrapper {
   grid-area: about;
 }
+
+.about {
+  background-color: var(--quaternary);
+}
+
+.about-paragraph {
+  margin-bottom: 5%;
+}
+
 
 .project-wrapper {
   grid-area: projects;
@@ -84,6 +106,6 @@ html {
 
 .project {
   background-color: var(--quaternary);
-  height: 100%;
+  height: fit-content;
   width: 100%;
 }
