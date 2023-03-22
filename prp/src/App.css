@@ -1,38 +1,89 @@
-.App {
-  text-align: center;
+
+
+
+
+:root {
+  --primary: #fadda2;
+  --secondary: #6b61ff;
+  --tertiary: #66a1ff;
+  --quaternary: #8ecde6;
+  --quinternary: #f0eff4; 
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  background-color: var(--tertiary);
+  font-family: 'Roboto Mono', monospace;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar {
+  position: fixed;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-direction: row;
+  height: 5rem;
+}
+
+
+.body {
+  position: relative;
+  top: 5rem;
+  display: grid;
+  grid-template-columns: 15% 70% 15%;
+  grid-template-rows: 32% 32% 32% 4%;
+  grid-template-areas: 
+  'left hero right'
+  'left projects right'
+  'left about right'
+  'left footer right'
+  ;
+}
+
+.hero {
+  grid-area: hero;
+  background-color: var(--secondary);
+}
+
+.herotitle {
+  justify-self: center;
+  text-align: center;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.about {
+  grid-area: about;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.project-wrapper {
+  grid-area: projects;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: 30% 5% 30% 5% 30%;
+  height: 100%;
+  width: 100%;
+  grid-template-areas: 
+  'project1 space1 project2 space2 project3'
+  ;
+}
+
+.projects:nth-child(0){
+  grid-area: project1;
+}
+
+.projects:nth-child(1){
+  grid-area: space1;
+}
+
+.projects:nth-child(2){
+  grid-area: project2;
+}
+
+.projects:nth-child(4){
+  grid-area: project3;
+}
+
+.project {
+  background-color: var(--quaternary);
+  height: 100%;
+  width: 100%;
 }
