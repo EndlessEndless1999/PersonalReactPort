@@ -240,6 +240,8 @@ mark {
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
+  height: 100vh;
+  margin-left: 94%;
 }
 
 .left-side-list {
@@ -247,9 +249,23 @@ mark {
   flex-direction: column;
 }
 
+.tech-wrapper {
+  position: fixed;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  padding-left: 1%;
+  padding-right: 1%;
+  outline: 1px white solid;
+  margin-bottom: 10%;
+  padding-bottom: 0%;
+  border-radius: 6px 6px 6px 6px;
+}
+
 .li-tech:hover{
   color: var(--quinternary);
 }
+
 
 .li-git{
   cursor: pointer;
@@ -276,6 +292,12 @@ mark {
 .hl {
   border-top: 1px solid rgba(255, 255, 255, 0.341);
   width: 15%;
+  align-self: center;
+}
+
+.hl-t {
+  border-top: 1px solid rgba(255, 255, 255, 0.341);
+  width: 75%;
   align-self: center;
 }
 
