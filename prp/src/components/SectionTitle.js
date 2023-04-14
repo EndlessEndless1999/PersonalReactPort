@@ -1,7 +1,10 @@
 
 const SectionTitle = ({title}) => {
     return (
-        <h2 className="section-title">{title}</h2>
+        <div className="section-title">
+            <h2 className="section-title-h2">{title}</h2>
+        </div>
+
     )
 }
 

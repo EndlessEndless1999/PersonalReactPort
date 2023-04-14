@@ -1,16 +1,18 @@
 
 :root {
-  --primary: #fadda2;
-  --secondary: #6b61ff;
-  --tertiary: #66a1ff;
-  --quaternary: #8ecde6;
-  --quinternary: #f0eff4; 
+  --primary: rgb(62, 246, 222);
+  --secondary: rgb(44,59,76);
+  --tertiary: rgb(22,128,119);
+  --quaternary: rgb(44,59,76);
+  --quinternary: rgba(198,240,252,255); 
+  --cloth: rgba(72,52,64,255);
+  --skin: rgba(246,224,200,255);
 }
 
 html {
   margin: 0%;
   padding: 0%;
-  background-color: var(--tertiary);
+  background-color: var(--secondary);
   font-family: 'Roboto Mono', monospace;
   scroll-behavior: smooth;
 }
@@ -22,6 +24,22 @@ body {
 
 a {
   text-decoration: none;
+}
+
+mark {
+  color: var(--primary);
+  background: none;
+}
+
+.section-title {
+  color: var(--primary);
+  padding: 5%;
+}
+
+.widget-border {
+  border: var(--quinternary) 1px;
+  border-style: groove;
+  border-radius: 2%
 }
 
 .navbar {
@@ -61,14 +79,51 @@ a {
 }
 
 .hero {
+  height: 95vh;
   grid-area: hero;
   background-color: var(--secondary);
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+  grid-template-rows: 33% 20% 17% 30%;
+  grid-template-areas: 
+  '. . pic'
+  '. title pic'
+  '. paragraph .'
+  ;
 }
 
 .herotitle {
-  justify-self: center;
-  text-align: center;
+  grid-area: title;
   color: white;
+  font-size: 3rem;
+}
+
+
+.heroparagraph {
+  grid-area: paragraph;
+  color: white;
+  font-size: 1rem;
+  font-weight: 1;
+  padding-bottom: 10%;
+}
+
+.profilePic {
+  align-self: center;
+  max-width: 25%;
+  max-height: 25%;
+  border-radius: 25% 25%;
+  margin-top: 10%;
+  box-shadow:  1px 6px rgba(13, 13, 13, 0.07);
+  outline: white 1px solid;
+}
+
+.tech-list {
+  color: white;
+  padding: 5%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  list-style: none;
 }
 
 .about-wrapper {
@@ -76,16 +131,22 @@ a {
 }
 
 .about {
-  background-color: var(--quaternary);
+  background-color: var(--secondary);
+  display: flex;
+  justify-items: center;
+  flex-direction: column;
 }
 
 .about-paragraph {
   margin-bottom: 5%;
+  color: white;
+  padding: 5%;
 }
 
 
 .project-wrapper {
   grid-area: projects;
+  color: white;
 }
 
 .projects {
@@ -114,10 +175,37 @@ a {
   grid-area: project3;
 }
 
+.project-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+}
+
+.link-button-site {
+  border: none;
+  grid-area: button1;
+}
+
+.link-button-git {
+  background-color: white;
+  border: none;
+  grid-area: button2;
+}
+
+.btn {
+  background-color: white;
+  border: none
+}
+
 .project {
-  background-color: var(--quaternary);
+  font-size: small;
+  background-color: var(--secondary);
   height: fit-content;
-  width: 100%;
+  width: fit-content;
+  padding: 10%;
+  height: 60%;
+  width: 75%;
+  padding-bottom: 2%;
 }
 
 .contact-wrapper {
@@ -125,7 +213,7 @@ a {
 }
 
 .contact {
-  background-color: var(--quaternary);
+  background-color: var(--secondary);
 }
 
 .footer-wrapper {
@@ -133,7 +221,67 @@ a {
 }
 
 .footer {
-  background-color: var(--quinternary);
+  background-color: var(--secondary);
   text-align: center;
   color: black;
+}
+
+.left-side-wrapper {
+  position: fixed;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  height: 100vh;
+  margin-left: 3%;
+}
+
+.right-side-wrapper {
+  position: fixed;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.left-side-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.li-tech:hover{
+  color: var(--quinternary);
+}
+
+.li-git{
+  cursor: pointer;
+  padding: 75%;
+}
+
+.li-link{
+  cursor: pointer;
+  padding: 75%;
+}
+
+.li-itch{
+  cursor: pointer;
+  padding: 75%;
+}
+/* Utility Classes */
+
+.vl {
+  border-left: 1px solid rgba(255, 255, 255, 0.341);
+  height: 15%;
+  align-self: center;
+}
+
+.hl {
+  border-top: 1px solid rgba(255, 255, 255, 0.341);
+  width: 15%;
+  align-self: center;
+}
+
+
+.para-wrapper {
+  grid-area: paragraph;
+  display: flex;
+  flex-direction: column;
 }

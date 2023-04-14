@@ -1,9 +1,9 @@
 
-const LinkButton = ({link, text}) => {
+const LinkButton = ({link, text, area, type}) => {
     return (
-        <div>
+        <div className={area}>
             <a href={link} target="_blank" rel="noreferrer">
-                <button>{text}</button>
+                <button className={type}>{text}</button>
             </a>
         </div>
     )
