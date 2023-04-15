@@ -1,4 +1,4 @@
-import VerticalLine from "./VerticalLine"
+
 import TechIcon from "./TechIcon";
 
 const RightSide = () => {

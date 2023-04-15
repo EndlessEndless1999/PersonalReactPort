@@ -28,11 +28,11 @@ const Projects = () => {
                 <div className="space"></div>
                 <Project 
                     symbol={"fa-solid fa-martini-glass"}
-                    title={"Cocktail Bar"}
-                    description={"Website utilising the DrinksDB API to relay cocktail recipe information to the end user."}
-                    site={"https://endlessendless1999.github.io/CocktailBar/"}
-                    git={"https://github.com/EndlessEndless1999/CocktailBar"}
-                    tech={"JS BootStrap RapidAPI"}
+                    title={"Tala Diamanti"}
+                    description={"Website for client allowing them to advertise their luxury rental property in Cyprus."}
+                    site={"https://endlessendless1999.github.io/tala-diamanti/"}
+                    git={"https://github.com/EndlessEndless1999/tala-diamanti"}
+                    tech={"JS BootStrap"}
                 />
             </div>
         </div>

@@ -39,7 +39,8 @@ mark {
 .widget-border {
   border: var(--quinternary) 1px;
   border-style: groove;
-  border-radius: 2%
+  border-radius: 2%;
+  box-shadow: rgba(0, 0, 0, 0.1) 2px 4px 12px;
 }
 
 .navbar {
@@ -52,6 +53,7 @@ mark {
   align-items: center;
   height: 3rem;
   z-index: 2;
+  box-shadow: rgba(0, 0, 0, 0.1) 2px 4px 12px;
 }
 
 
@@ -159,6 +161,10 @@ mark {
   ;
 }
 
+.project-tech {
+  color: rgba(255, 255, 255, 0.742);
+}
+
 .projects:nth-child(0){
   grid-area: project1;
 }
@@ -198,6 +204,7 @@ mark {
 }
 
 .project {
+  position: relative;
   font-size: small;
   background-color: var(--secondary);
   height: fit-content;
@@ -214,6 +221,20 @@ mark {
 
 .contact {
   background-color: var(--secondary);
+  display: flex;
+  flex-direction: column;
+  padding: 5%;
+}
+
+.contact-title {
+  text-align: center;
+  color: var(--primary);
+  padding: 5%;
+}
+
+.contact-item {
+  padding: 2%;
+  color: white;
 }
 
 .footer-wrapper {
@@ -238,10 +259,10 @@ mark {
 .right-side-wrapper {
   position: fixed;
   display: flex;
-  flex-direction: column-reverse;
-  align-items: center;
+  flex-direction: row-reverse;
   height: 100vh;
-  margin-left: 94%;
+  margin-left: 92%;
+  margin-top: 2%;
 }
 
 .left-side-list {
@@ -253,6 +274,19 @@ mark {
   position: fixed;
   display: flex;
   flex-direction: column-reverse;
+  align-items: center;
+  padding-left: 1%;
+  padding-right: 1%;
+  outline: 1px white solid;
+  margin-bottom: 10%;
+  padding-bottom: 0%;
+  border-radius: 6px 6px 6px 6px;
+}
+
+.tech-right-wrapper {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
   align-items: center;
   padding-left: 1%;
   padding-right: 1%;
@@ -295,6 +329,15 @@ mark {
   align-self: center;
 }
 
+.hl-r {
+  border-top: 1px solid rgba(255, 255, 255, 0.341);
+  width: 80%;
+  z-index: 4;
+  position: relative;
+  right: 40%;
+  align-self: center;
+}
+
 .hl-t {
   border-top: 1px solid rgba(255, 255, 255, 0.341);
   width: 75%;
@@ -306,4 +349,9 @@ mark {
   grid-area: paragraph;
   display: flex;
   flex-direction: column;
+}
+
+.contact-paragraph {
+  color: white;
+  padding: 2%;
 }
